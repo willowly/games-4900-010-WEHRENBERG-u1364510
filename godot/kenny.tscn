@@ -1,0 +1,53 @@
+[gd_scene load_steps=11 format=3 uid="uid://dxftwypeb61bj"]
+
+[ext_resource type="PackedScene" uid="uid://bgqgce4orth15" path="res://Model/building-e.fbx" id="1_ix5u6"]
+[ext_resource type="PackedScene" uid="uid://b0p8goukxx75l" path="res://Model/building-f.fbx" id="2_0nivd"]
+[ext_resource type="PackedScene" uid="uid://bo0kysavkifbe" path="res://Model/building-g.fbx" id="3_kdyix"]
+[ext_resource type="PackedScene" uid="uid://osyvjn1y1sky" path="res://Model/building-h.fbx" id="4_6ih4p"]
+[ext_resource type="PackedScene" uid="uid://jaea6y8hevqu" path="res://Model/building-j.fbx" id="5_5ichh"]
+[ext_resource type="PackedScene" uid="uid://das3hqniypirn" path="res://Model/building-k.fbx" id="6_71s6t"]
+[ext_resource type="PackedScene" uid="uid://lh8kc32yg5xs" path="res://Model/detail-parasol-a.fbx" id="7_6ih4p"]
+[ext_resource type="PackedScene" uid="uid://cpb2x8s81kovh" path="res://Model/building-l.fbx" id="7_h2cf6"]
+[ext_resource type="PackedScene" uid="uid://dhrd1wc8w8tp8" path="res://Model/detail-awning.fbx" id="9_5ichh"]
+[ext_resource type="PackedScene" uid="uid://7kh66dcoo8nh" path="res://Model/detail-parasol-b.fbx" id="10_71s6t"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="building-e" parent="." instance=ExtResource("1_ix5u6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3669792, 0, -0.91995)
+
+[node name="building-f" parent="." instance=ExtResource("2_0nivd")]
+transform = Transform3D(-0.99976164, 0, -0.021832313, 0, 1, 0, 0.021832313, 0, -0.99976164, 0.3130237, 0, -0.8635497)
+
+[node name="building-g" parent="." instance=ExtResource("3_kdyix")]
+transform = Transform3D(-0.99985844, 0, 0.01682408, 0, 1, 0, -0.01682408, 0, -0.99985844, 1.6078153, 0, -0.80789924)
+
+[node name="building-h" parent="." instance=ExtResource("4_6ih4p")]
+transform = Transform3D(-0.9988609, 0, 0.047716524, 0, 1, 0, -0.047716524, 0, -0.9988609, 2.8922348, 1.1920929e-07, -0.9562447)
+
+[node name="building-j" parent="." instance=ExtResource("5_5ichh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.649978, 0, 1.6950157)
+
+[node name="building-k" parent="." instance=ExtResource("6_71s6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28880763, 0, 1.4425242)
+
+[node name="detail-parasol-a" parent="building-k" instance=ExtResource("7_6ih4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0866647, 0)
+
+[node name="detail-parasol-a2" parent="building-k/detail-parasol-a" instance=ExtResource("7_6ih4p")]
+transform = Transform3D(0.4420811, 0, 0, 0, 1.0377364, 0, 0, 0, 0.41694397, 0, 0.33187127, 0)
+
+[node name="building-l" parent="." instance=ExtResource("7_h2cf6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8632016, 0, 1.6429994)
+
+[node name="detail-awning" parent="building-l" instance=ExtResource("9_5ichh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.06470525, -0.021817982, -0.88292795)
+
+[node name="detail-parasol-b" parent="." instance=ExtResource("10_71s6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7520318, 0, 0.48282802)
+
+[node name="detail-parasol-a" parent="." instance=ExtResource("7_6ih4p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64958715, 0, -0.0072791576)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.008656763, 0, -0.99996245, 0, 1, 0, 0.99996245, 0, 0.008656763, -3.0220528, 1.0940926, 0.34927845)
