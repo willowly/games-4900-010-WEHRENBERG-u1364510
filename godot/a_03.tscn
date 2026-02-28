@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bsjsxor1b00g7"]
+
+[ext_resource type="PackedScene" uid="uid://b65tpuqdysov0" path="res://proto_controller.tscn" id="1_c6rvl"]
+[ext_resource type="PackedScene" uid="uid://cim88pdxl54vl" path="res://coin.tscn" id="2_2pmmy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2pmmy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tkmxy"]
+
+[node name="A03" type="Node3D" unique_id=2029680690]
+
+[node name="ProtoController" parent="." unique_id=954467008 instance=ExtResource("1_c6rvl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.529937, 0, -1.8267899)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=183466055]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=827583738]
+transform = Transform3D(17.266615, 0, 0, 0, 0.2220034, 0, 0, 0, 21.633036, 0, 0, 0)
+shape = SubResource("BoxShape3D_2pmmy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D/CollisionShape3D" unique_id=1908271700]
+mesh = SubResource("BoxMesh_tkmxy")
+skeleton = NodePath("../..")
+
+[node name="Coin" parent="." unique_id=810108414 instance=ExtResource("2_2pmmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6433499, 0.8879962, 0.9144285)
+
+[node name="Area3D" parent="." unique_id=1241372592 instance=ExtResource("2_2pmmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.3927293, 0.7528887, -5.116232)
+
+[node name="Area3D2" parent="." unique_id=2144017717 instance=ExtResource("2_2pmmy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.522325, 0.8262024, -6.716812)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1655692055]
+transform = Transform3D(1, 0, 0, 0, -0.8652039, 0.50142014, 0, -0.50142014, -0.8652039, 0, 4.1920314, 0)

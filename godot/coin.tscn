@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cim88pdxl54vl"]
+
+[ext_resource type="Script" uid="uid://djhbcru8anqdw" path="res://coin.gd" id="1_d5gmh"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tkmxy"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_25snm"]
+
+[node name="Area3D" type="Area3D" unique_id=810108414]
+script = ExtResource("1_d5gmh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1428248063]
+shape = SubResource("BoxShape3D_tkmxy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=217404084]
+mesh = SubResource("SphereMesh_25snm")
