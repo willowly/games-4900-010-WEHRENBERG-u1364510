@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -55,6 +56,7 @@ public class Player : MonoBehaviour
 
         map.Player.Jump.started += JumpStart;
         map.Player.Jump.canceled += JumpEnd;
+        map.Player.Attack.started += Attack;
     }
 
     void FixedUpdate()
@@ -83,6 +85,11 @@ public class Player : MonoBehaviour
     void SetState(State newState) {
         state = newState;
         timeInState = 0;
+    }
+
+    void Attack(InputAction.CallbackContext e)
+    {
+        Debug.Log("Attack!!");
     }
 
     void StateNeutral() {
